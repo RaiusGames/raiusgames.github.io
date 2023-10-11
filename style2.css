@@ -1,0 +1,123 @@
+html{
+    /* font-family: 'UD デジタル 教科書体 N-B', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    background-color: rgb(36, 30, 39);
+}
+
+.banner{
+    display: block;
+    margin: -8px;
+    background-image: url("images/Hope.jpg");
+    background-position: 24% 15%;
+    background-size: cover;
+}
+.banner img{
+    display: inline-block;
+    margin: auto;
+    padding: 12px 0px 0px 36px;
+}
+.banner a h1{
+    display: inline-block;
+    margin: auto;
+    padding: 16px 36px;
+
+    /* background-color: rgb(255, 245, 240); */
+
+    color: wheat;
+}
+.sites{
+    float: right;
+    padding: 16px;
+}
+
+.sites img{
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    opacity: 0.6;
+}
+.sites img:hover{
+    opacity: 1;
+    
+    animation: bounce .6s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: infinite;
+}
+  
+@keyframes bounce {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(0px, -5px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.commission-images{
+    display: block;
+    text-align: center;
+
+    margin: 0px;
+}
+.commission-images img{
+    max-width: 72%;
+}
+
+h1:not(.banner h1){
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 21px;
+}
+
+h2, p, li, ul{
+    text-align: center;
+    color: white;
+    list-style: none;
+}
+
+@media screen and (max-width: 992px) {
+    .banner{
+        display: block;
+        height: 220px;
+
+        font-size: large;
+        text-align: center;
+
+        background-image: url(images/rhea.png);
+        background-color:rgb(23, 17, 23);
+        background-size: 250%;
+        background-position: 90% 10%;
+    }
+
+    .signature img{
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        width: 130px;
+    }
+
+    .banner a h1{
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+    }
+    .sites{
+        width: 92%;
+    }
+    .sites img{
+        padding-top: 0px;
+        margin-top: -10px;
+        opacity: 1;
+    }
+
+    .commission-images img{
+        max-width: 100%;
+    }
+}
+
+@media screen and (height <= 420px) {
+    .commission-images img{
+        max-width: 75%;
+    }
+}

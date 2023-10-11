@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/x-icon" href="images/rhea.png">
+
+    <style>
+        .contact{
+            color: white;
+            text-align: center;
+        }
+        .contact-sites{
+            padding-bottom: 20px;
+        }
+        
+        .contact-sites img{
+            padding-left: 10px;
+            padding-right: 10px;
+            width: fit-content;
+            opacity: 0.6;
+        }
+        .contact-sites img:hover{
+            opacity: 1;
+            
+            animation: bounce .6s;
+            animation-timing-function: cubic-bezier();
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translate(0px, 0px); }
+            50% { transform: translate(0px, -5px); }
+            100% { transform: translate(0px, 0px); }
+        }
+
+        .panel {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            grid-template-rows: auto;
+            
+            height: 50%;
+
+            margin: 30px auto 30px auto;
+
+            grid-template-areas: 
+            "panel-image panel-text";
+
+            align-items: center;
+
+            background-color: antiquewhite;
+
+            filter: blur(5px);
+            opacity: 0.5;
+            transition: .3s ease;
+        }
+        .panel:hover{
+            opacity: 1;
+            filter: blur(0px);
+        }
+
+        .panel-image{
+            grid-area: panel-image;
+            
+            width: 100%;
+            height: 100%;
+            
+            background-image: url("images/games/strange-shores2.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgb(27, 22, 36);
+        }
+        .panel-text{
+            grid-area: panel-text;
+
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: .5fr 1fr .5fr;
+            grid-template-areas:
+            "header"
+            "description"
+            "more-info";
+
+            padding: 30px;
+
+            align-items: center;
+
+            background-color: rgb(27, 22, 36);
+            text-align: center;
+            color: antiquewhite;
+
+            font-size: xx-large;
+        }
+        .panel-header{
+            grid-area: header;
+        }
+        .panel-description{
+            grid-area: description;
+
+            font-size: x-large;
+        }
+        .more-info{
+            grid-area: more-info;
+
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+
+            width: 50%;
+            height: 15%;
+            
+            background-color: antiquewhite;
+            border-radius: 20px;
+            
+            text-decoration: none;
+            color: rgb(27, 22, 36);
+        }
+        .more-info:hover{
+            background-color: rgb(96, 80, 102);
+            color: antiquewhite;
+        }
+
+        #home .panel-image{
+            background-image: url(images/games/home-banner.png);
+        }
+
+        #the-alchemist .panel-image{
+            background-image: url(images/games/alchemist1.jpg);
+        }
+
+        #journey-home .panel-image{
+            background-image: url(images/games/journey-home1.jpg);
+        }
+
+        #millika-village .panel-image{
+            background-image: url(images/games/millika1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #millika-village, #home{
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: auto;
+            
+            height: 100%;
+
+            grid-template-areas: 
+            "panel-text panel-image";
+        }
+
+        @media screen and (max-width: 992px) {
+            .panel, #millika-village, #home {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3fr;
+                
+                height: 100%;
+                margin: 30px 0px 30px 0px;
+
+                grid-template-areas: 
+                "panel-image"
+                "panel-text";
+
+                background-color: rgb(27, 22, 36);
+
+                filter: blur(0px);
+                opacity: 1;
+            }
+            .panel-text{
+                padding: 0;
+                font-size: large;
+            }
+            .panel-description{
+                font-size: medium;
+            }
+            .more-info{
+                height: 10%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- <a href="index.html"><h1>Raius</h1></a> -->
+        <a href="index.html" class="signature"><img src="images/signature wheat.png" alt="artist signature" width="110"></a>
+        
+        <div class="sites">
+            <!-- <a href="https://twitter.com/Raius_"><img src="images/social_media/twitter.png" alt="Twitter icon" width="60" height="60"></a> -->
+            <!-- <a href="https://www.pixiv.net/users/46380655"><img src="images/social_media/pixiv icon.png" alt="Pixiv icon" width="60" height="60"></a> -->
+            <a href="https://raius.itch.io"><img src="images/social_media/itch-icon.png" alt="itch.io icon" width="60" height="60"></a>
+            <a href="https://www.youtube.com/channel/UCeEa8Hb9JJnjPDVaTy7WmrQ"><img src="images/social_media/youtube-logo.png" alt="itch.io icon" width="60" height="60"></a>
+            <a href="mailto:RaiusGames@hotmail.com"><img src="images/social_media/mail-icon.png" alt="e-mail icon" width="60" height="60"></a>
+            <!-- <a href="https://gumroad.com"><img src="images/social_media/gumroad.png" alt="Gumroad icon" width="60" height="60"></a> -->
+        </div>
+    </div>
+
+    <div class="panel" id="strange-shores">
+        <div class="panel-image"></div>
+
+        <div class="panel-text">
+            <div class="panel-header"><h1>Strange Shores</h1></div>
+            <div class="panel-description">
+                <h2>Role:<br> Art, Programming, Guitar</h2>
+                <h2>Engine:<br>Godot</h2>
+                <h2>Genre:<br>Adventure</h2>
+                <h2>Release Date:<br> 26/04/2022</h2>
+            </div>
+            <a href="https://raius.itch.io/strange-shores" class="more-info">Game Page</a>
+        </div>
+    </div>
+
+    <div class="panel" id="millika-village">
+        <div class="panel-image"></div>
+
+        <div class="panel-text">
+            <div class="panel-header"><h1>Millika Village</h1></div>
+            <div class="panel-description">
+                <h2>Role:<br>All</h2>
+                <h2>Engine:<br>Unity</h2>
+                <h2>Genre:<br>Visual Novel</h2>
+                <h2>Release Date:<br> 09/02/2017</h2>
+            </div>
+            <a href="https://raius.itch.io/millika-village" class="more-info">Game Page</a>
+        </div>
+    </div>
+
+    <div class="panel" id="the-alchemist">
+        <div class="panel-image"></div>
+
+        <div class="panel-text">
+            <div class="panel-header"><h1>The Alchemist</h1></div>
+            <div class="panel-description">
+                <h2>Role:<br>All</h2>
+                <h2>Engine:<br>Unity</h2>
+                <h2>Genre:<br>Visual Novel</h2>
+                <h2>Release Date:<br> 04/08/2017</h2>
+            </div>
+            <a href="https://raius.itch.io/the-alchemist" class="more-info">Game Page</a>
+        </div>
+    </div>
+
+    <div class="panel" id="home">
+        <div class="panel-image"></div>
+
+        <div class="panel-text">
+            <div class="panel-header"><h1>Home</h1></div>
+            <div class="panel-description">
+                <h2>Role:<br>All</h2>
+                <h2>Engine:<br>Unity</h2>
+                <h2>Genre:<br>Visual Novel</h2>
+                <h2>Release Date:<br> 21/02/2016</h2>
+            </div>
+            <a href="https://raius.itch.io/home" class="more-info">Game Page</a>
+        </div>
+    </div>
+
+    <div class="panel" id="journey-home">
+        <div class="panel-image"></div>
+
+        <div class="panel-text">
+            <div class="panel-header"><h1>The Journey Home</h1></div>
+            <div class="panel-description">
+                <h2>Role:<br>All</h2>
+                <h2>Engine:<br>Unity</h2>
+                <h2>Genre:<br>Platformer, Visual Novel</h2>
+                <h2>Release Date:<br> 09/06/2016</h2>
+            </div>
+            <a href="https://raius.itch.io/the-journey-home" class="more-info">Game Page</a>
+        </div>
+    </div>
+
+    <!-- <div class="commission-images">
+        <img src="images/commission_images/price list v3 1.png" width="1200">
+    </div> -->
+</body>
+</html>
