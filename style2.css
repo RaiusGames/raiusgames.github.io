@@ -5,6 +5,10 @@ html{
     background-color: rgb(36, 30, 39);
 }
 
+::selection{
+    background-color: orangered;
+}
+
 .banner{
     display: block;
     margin: -8px;
