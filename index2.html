@@ -20,7 +20,7 @@
         }
 
         ::selection{
-            background-color: rgb(255, 102, 0);
+            background-color: orangered;
         }
 
         .bg{
@@ -106,7 +106,7 @@
     
             align-items: center;
 
-            background-color: rgb(27, 22, 36);
+            /* background-color: rgba(27, 22, 36); */
 
             filter: blur(5px);
             opacity: 0.5;
@@ -122,7 +122,7 @@
             width: 100%;
             height: 100%;
             
-            background-image: url("images/Hope.jpg");
+            background-image: url("images/hope-transparent.png");
             background-position: center;
             background-size: cover;
 
@@ -142,7 +142,7 @@
 
             align-items: center;
 
-            background-color: rgb(27, 22, 36);
+            /* background-color: rgb(27, 22, 36); */
             text-align: center;
             color: antiquewhite;
 
@@ -232,30 +232,16 @@
             filter: blur(5px);
             transition: .3s ease;
         }
+        .skills-panel ul{
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
         .skills-panel:hover{
             opacity: 1;
             filter: blur(0px);
         }
-        .skill-category{
-            padding: 1px;
-            margin: 20px;
-            background-color: rgba(250, 235, 215, 0.06);
-            border-radius: 20px;
-        }
-        .skill-items ul{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            list-style: none;
-            padding: 0;
-            margin: 20px;
-        }
-        .skill-items li{
-            padding: 8px 24px 8px 24px;
-            margin-left: 8px;
-            margin-right: 8px;
-
+        .skill-entry{
             background-color: rgba(250, 235, 215, 0.06);
             border-radius: 20px;
         }
@@ -311,10 +297,6 @@
 
                 filter: blur(0px);
                 opacity: 1;
-            }
-            .skill-items ul{
-                flex-direction: column;
-                justify-content: center;
             }
         }
 
@@ -388,63 +370,19 @@
     <div class="skills-panel">
         <div class="panel-header"><h1>Skills Summary</h1></div>
         <div class="panel-description">
-            <div class="skill-category">
-                <h2>2D</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Illustration</li><li>Concept Art</li><li>Character Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>3D</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Modelling</li><li>Texturing</li><li>Rigging</li><li>Animation</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Game Development</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Godot</li><li>Unity</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Programming</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>GDScript</li><li>C</li><li>Python</li><li>JavaScript</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Web Development</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>HTML</li><li>CSS</li><li>JavaScript</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Music</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Guitar</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Currently Learning</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>OpenGL</li><li>Ruby On Rails</li><li>Compiler Construction</li>
-                        <li>Linux</li><li>Vim</li>
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                <li class="skill-entry"><b><u>2D</u></b><br>Illustration, Concept Art, Character Design (Clip Studio PAINT, Krita)</li>
+                <br>
+                <li class="skill-entry"><b><u>3D</u></b><br>Basic Modelling, Texturing, Rigging, Animation (Blender)</li>
+                <br>
+                <li class="skill-entry"><b><u>Game Development</u></b><br>Godot, Unity</li>
+                <br>
+                <li class="skill-entry"><b><u>Programming</u></b><br>GDScript, C, C#, Python, JavaScript</li>
+                <br>
+                <li class="skill-entry"><b><u>Web Development</u></b><br>Basic HTML, CSS, JavaScript</li>
+                <br>
+                <li class="skill-entry"><b><u>Guitar</u></b><br>Music in most of my games is performed and recorded by me.</li>
+            </ul>
         </div>
     </div>
 </div>
