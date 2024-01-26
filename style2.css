@@ -12,8 +12,8 @@ html{
 .banner{
     display: block;
     margin: -8px;
-    background-image: url("images/Hope.jpg");
-    background-position: 24% 15%;
+    background-image: url("images/witch.jpg");
+    background-position: 0% 19%;
     background-size: cover;
 }
 .banner img{
