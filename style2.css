@@ -12,8 +12,8 @@ html{
 .banner{
     display: block;
     margin: -8px;
-    background-image: url("images/witch.jpg");
-    background-position: 0% 19%;
+    background-image: url(images/games/strange-shores1.jpg);
+    background-position: 0% 0%;
     background-size: cover;
 }
 .banner img{
@@ -88,10 +88,10 @@ h2, p, li, ul{
         font-size: large;
         text-align: center;
 
-        background-image: url(images/witch.jpg);
+        background-image: url(images/games/strange-shores1.jpg);
         background-color:rgb(23, 17, 23);
         background-size: 250%;
-        background-position: 85% 13%;
+        background-position: 0% 0%;
     }
 
     .signature img{
