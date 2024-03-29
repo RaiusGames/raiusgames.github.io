@@ -1,5 +1,6 @@
 const images =
 [
+    'url("images/mona-web.jpg")',
     'url("images/witch2.jpg")',
     'url("images/witch.jpg")',
     'url("images/ambush.jpg")',
