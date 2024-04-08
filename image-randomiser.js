@@ -1,11 +1,12 @@
 const images =
 [
     'url("images/mona-web.jpg")',
-    'url("images/witch2.jpg")',
-    'url("images/witch.jpg")',
+    'url("images/amber-web.jpg")',
     'url("images/ambush.jpg")',
-    'url("images/late-night.jpg")',
+    'url("images/witch.jpg")',
     'url("images/rain.jpg")',
+    'url("images/witch2.jpg")',
+    'url("images/late-night.jpg")',
     'url("images/games/3d-test1.jpg")',
     'url("images/games/3d-test2.jpg")',
     'url("images/games/strange-shores2.jpg")',
