@@ -106,13 +106,23 @@ h2, p, li, ul{
         background-color: rgba(0, 0, 0, 0);
         color: white;
     }
-    .sites{
+/*     .sites{
         width: 92%;
     }
     .sites img{
         padding-top: 0px;
-        margin-top: -10px;
         opacity: 1;
+    } */
+    .sites{
+        position: absolute;
+        left: 0%;
+    }
+    
+    .sites img{
+        padding-left: 1px;
+        padding-right: 1px;
+        margin-top: -30px;
+        opacity: 0.6;
     }
 
     .commission-images img{
