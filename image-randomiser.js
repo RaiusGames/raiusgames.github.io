@@ -4,6 +4,7 @@ const images =
     'url("images/amber-web.jpg")',
     'url("images/commission_images/chope 2.jpg")',
     'url("images/ambush.jpg")',
+    'url("images/commission_images/sol-lake.jpg")',
     'url("images/witch.jpg")',
     'url("images/rain.jpg")',
     'url("images/witch2.jpg")',
