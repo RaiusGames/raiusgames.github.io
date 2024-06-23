@@ -1,369 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raius</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="icon" type="image/x-icon" href="images/icon1.jpg">
-    <script src="image-randomiser.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raius</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" type="image/x-icon" href="images/icon1.jpg">
+  <script src="image-randomiser.js"></script>
 
-    <style>
-        body, html{
-            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  <style>
+    body,
+    html {
+      /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: x-large; */
-            background-color: rgb(36, 30, 39);
-            color: rgb(226, 78, 103);
+      background-color: rgb(36, 30, 39);
+      color: rgb(226, 78, 103);
 
-            height: 100%;
-            margin: 0;
-        }
+      height: 100%;
+      margin: 0;
+    }
 
-        ::selection{
-            background-color: rgb(255, 102, 0);
-        }
+    ::selection {
+      background-color: rgb(255, 102, 0);
+    }
 
-        .bg{
-            background-image: url("images/mona-web.jpg");
-            height: 100%;
+    .bg {
+      background-image: url("images/mona-web.jpg");
+      height: 100%;
 
-            background-position: 0% 48%;
-            background-repeat: no-repeat;
-            background-size: cover;
+      background-position: 0% 48%;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-            filter: blur(3px);
+      filter: blur(3px);
 
-            opacity: 40%;
-        }
+      opacity: 40%;
+    }
 
-        .sites{
-            position: absolute;
+    .sites {
+      position: absolute;
 
-            top: 3%;
-            right: 1%;
-        }
+      top: 3%;
+      right: 1%;
+    }
 
-        .sites img{
-            padding-left: 10px;
-            padding-right: 10px;
-            opacity: 0.6;
-        }
-        .sites img:hover{
-            opacity: 1;
-            
-            animation: bounce .6s;
-            animation-timing-function: cubic-bezier();
-            animation-iteration-count: infinite;
-        }
-        
-        @keyframes bounce {
-            0% { transform: translate(0px, 0px); }
-            50% { transform: translate(0px, -5px); }
-            100% { transform: translate(0px, 0px); }
-        }
+    .sites img {
+      padding-left: 10px;
+      padding-right: 10px;
+      opacity: 0.6;
+    }
 
-        .banner-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            
-            font-size: 500%;
-            color: wheat;
+    .sites img:hover {
+      opacity: 1;
 
-        }
+      animation: bounce .6s;
+      animation-timing-function: cubic-bezier();
+      animation-iteration-count: infinite;
+    }
 
-        #desktop{
-            display: block;
-        }
-        #mobile{
-            display: none;
-        }
-        .banner-subtext{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            font-size: 200%;
-            color: white;
+    @keyframes bounce {
+      0% {
+        transform: translate(0px, 0px);
+      }
 
-            text-align: center;
+      50% {
+        transform: translate(0px, -5px);
+      }
 
-            transform: translate(-50%, 250%);
-        }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
 
-        .panel {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            grid-template-rows: auto;
-            
-            height: 100%;
-            margin: 30px 0px 30px 0px;
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-            grid-template-areas: 
-            "panel-image panel-text";
-    
-            align-items: center;
+      font-size: 500%;
+      color: wheat;
 
-            background-color: rgb(27, 22, 36);
+    }
 
-            filter: blur(5px);
-            opacity: 0.5;
-            transition: .3s ease;
-        }
-        .panel:hover{
-            opacity: 1;
-            filter: blur(0px);
-        }
-        .panel-image{
-            grid-area: panel-image;
-            
-            width: 100%;
-            height: 100%;
-            
-            background-image: url("images/ambush.jpg");
-            background-position: center;
-            background-size: cover;
+    #desktop {
+      display: block;
+    }
 
-        }
-        .panel-text{
-            grid-area: panel-text;
+    #mobile {
+      display: none;
+    }
 
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: .5fr 1fr .5fr;
-            grid-template-areas:
-            "header"
-            "description"
-            "more-info";
+    .banner-subtext {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      font-size: 200%;
+      color: white;
 
-            padding: 30px;
+      text-align: center;
 
-            align-items: center;
+      transform: translate(-50%, 250%);
+    }
 
-            background-color: rgb(27, 22, 36);
-            text-align: center;
-            color: antiquewhite;
+    .panel {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: auto;
 
-            font-size: xx-large;
-        }
-        .panel-header{
-            grid-area: header;
-            font-size: 130%;
+      height: 100%;
+      margin: 30px 0px 30px 0px;
 
-            background-color: rgba(250, 235, 215, 0.06);
+      grid-template-areas:
+        "panel-image panel-text";
 
-            border: 2px;
-            border-style: dashed;
-            border-radius: 30px;
-            border-color: aliceblue;
-        }
-        .panel-description{
-            grid-area: description;
-        }
-        .more-info{
-            grid-area: more-info;
+      align-items: center;
 
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
+      background-color: rgb(27, 22, 36);
 
-            width: 50%;
-            height: 35%;
-            
-            background-color: antiquewhite;
-            border-radius: 20px;
+      filter: blur(5px);
+      opacity: 0.5;
+      transition: .3s ease;
+    }
 
-            text-decoration: none;
-            color: rgb(27, 22, 36);
-            /* line-height: 100%; */
-        }
-        .more-info:hover{
-            background-color: rgb(96, 80, 102);
-            color: antiquewhite;
-        }
+    .panel:hover {
+      opacity: 1;
+      filter: blur(0px);
+    }
 
-        #portfolio{
-            grid-template-columns: 2fr 3fr;
-            grid-template-rows: auto;
-            
-            height: 100%;
+    .panel-image {
+      grid-area: panel-image;
 
-            grid-template-areas: 
-            "panel-text panel-image";
-        }
-        #freelancing .panel-image{
-            background-image: url(images/commission_images/assunta-comm-night.jpg);
-            background-size: 100%;
-            background-position: 70% 10%;
-        }
-        #portfolio .panel-image{
-            background-image: url(images/commission_images/squid\ size\ no\ human.png);
-            background-size: 100%;
-            background-position: 30% 10%;
-        }
+      width: 100%;
+      height: 100%;
 
-        #games .panel-image{
-            background-image: url(images/games/3d-test1.jpg);
-        }
+      background-image: url("images/ambush.jpg");
+      background-position: center;
+      background-size: cover;
 
-        #skills .panel-description{
-            text-align: left;
-        }
-        .skills-panel{
-            padding: 15px;
+    }
 
-            background-color: rgb(27, 22, 36);
+    .panel-text {
+      grid-area: panel-text;
 
-            font-size: xx-large;
-            text-align: center;
-            color: antiquewhite;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: .5fr 1fr .5fr;
+      grid-template-areas:
+        "header"
+        "description"
+        "more-info";
 
-            opacity: 0.5;
-            filter: blur(5px);
-            transition: .3s ease;
-        }
-        .skills-panel:hover{
-            opacity: 1;
-            filter: blur(0px);
-        }
-        .skill-category{
-            padding: 1px;
-            margin: 20px;
-            background-color: rgba(250, 235, 215, 0.06);
-            border-radius: 20px;
-        }
-        .skill-items ul{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      padding: 30px;
 
-            list-style: none;
-            padding: 0;
-            margin: 20px;
-        }
-        .skill-items li{
-            padding: 8px 24px 8px 24px;
-            margin-left: 8px;
-            margin-right: 8px;
+      align-items: center;
 
-            background-color: rgba(250, 235, 215, 0.06);
-            border-radius: 20px;
-        }
+      background-color: rgb(27, 22, 36);
+      text-align: center;
+      color: antiquewhite;
 
-        @media screen and (max-width: 992px) {
-            .bg{
-                background-position: 55% 0%;
-            }
+      font-size: xx-large;
+    }
 
-            .banner-text img{
-                width: 225px;
-            }
-            #desktop{
-                display: none;
-            }
-            #mobile{
-                display: block;
-            }
-            .banner-subtext{
-                transform: translate(-50%, 100%);
-                font-size: xx-large;
-            }
-            .panel, #portfolio {
-                display: grid;
-                grid-template-columns: auto;
-                grid-template-rows: 1fr 2fr;
-                
-                height: 100%;
-                margin: 30px 0px 30px 0px;
+    .panel-header {
+      grid-area: header;
+      font-size: 130%;
 
-                grid-template-areas: 
-                "panel-image"
-                "panel-text";
+      background-color: rgba(250, 235, 215, 0.06);
 
-                background-color: rgb(27, 22, 36);
+      border: 2px;
+      border-style: dashed;
+      border-radius: 30px;
+      border-color: aliceblue;
+    }
 
-                filter: blur(0px);
-                opacity: 1;
-            }
-            .panel-text{
-                font-size: 80%;
-            }
-            .more-info{
-                height: 30%;
-            }
+    .panel-description {
+      grid-area: description;
+    }
 
-            .skills-panel{
-                font-size: x-large;
+    .more-info {
+      grid-area: more-info;
 
-                filter: blur(0px);
-                opacity: 1;
-            }
-            .skill-items ul{
-                flex-direction: column;
-                justify-content: center;
-            }
-            .skill-items li{
-                margin-bottom: 10px;
-            }
-            .sites{
-                top: 3%;
-                left: 16%;
-                position: absolute;
-                left: 0%;
-                width: 91%;
-            }
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
 
-            .sites img{
-                padding-left: 1px;
-                padding-right: 1px;
-                opacity: 0.6;
-            }
-        }
+      width: 50%;
+      height: 35%;
 
-        @media screen and (height <= 420px) {
-            .banner-text{
-                font-size: 400%;
-            }
-            .banner-subtext{
-                font-size: 200%;
-            }
-        }
-    </style>
+      background-color: antiquewhite;
+      border-radius: 20px;
+
+      text-decoration: none;
+      color: rgb(27, 22, 36);
+      /* line-height: 100%; */
+    }
+
+    .more-info:hover {
+      background-color: rgb(96, 80, 102);
+      color: antiquewhite;
+    }
+
+    #portfolio {
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: auto;
+
+      height: 100%;
+
+      grid-template-areas:
+        "panel-text panel-image";
+    }
+
+    #freelancing .panel-image {
+      background-image: url(images/commission_images/assunta-comm-night.jpg);
+      background-size: 100%;
+      background-position: 70% 10%;
+    }
+
+    #portfolio .panel-image {
+      background-image: url(images/commission_images/squid\ size\ no\ human.png);
+      background-size: 100%;
+      background-position: 30% 10%;
+    }
+
+    #games .panel-image {
+      background-image: url(images/games/3d-test1.jpg);
+    }
+
+    #skills .panel-description {
+      text-align: left;
+    }
+
+    .skills-panel {
+      padding: 15px;
+
+      background-color: rgb(27, 22, 36);
+
+      font-size: xx-large;
+      text-align: center;
+      color: antiquewhite;
+
+      opacity: 0.5;
+      filter: blur(5px);
+      transition: .3s ease;
+    }
+
+    .skills-panel:hover {
+      opacity: 1;
+      filter: blur(0px);
+    }
+
+    .skill-category {
+      padding: 1px;
+      margin: 20px;
+      background-color: rgba(250, 235, 215, 0.06);
+      border-radius: 20px;
+    }
+
+    .skill-items ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .skill-items li {
+      padding: 8px 24px 8px 24px;
+      margin-left: 8px;
+      margin-right: 8px;
+
+      background-color: rgba(250, 235, 215, 0.06);
+      border-radius: 20px;
+    }
+
+    @media screen and (max-width: 992px) {
+      .bg {
+        background-position: 55% 0%;
+      }
+
+      .banner-text img {
+        width: 225px;
+      }
+
+      #desktop {
+        display: none;
+      }
+
+      #mobile {
+        display: block;
+      }
+
+      .banner-subtext {
+        transform: translate(-50%, 100%);
+        font-size: xx-large;
+      }
+
+      .panel,
+      #portfolio {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 2fr;
+
+        height: 100%;
+        margin: 30px 0px 30px 0px;
+
+        grid-template-areas:
+          "panel-image"
+          "panel-text";
+
+        background-color: rgb(27, 22, 36);
+
+        filter: blur(0px);
+        opacity: 1;
+      }
+
+      .panel-text {
+        font-size: 80%;
+      }
+
+      .more-info {
+        height: 30%;
+      }
+
+      .skills-panel {
+        font-size: x-large;
+
+        filter: blur(0px);
+        opacity: 1;
+      }
+
+      .skill-items ul {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .skill-items li {
+        margin-bottom: 10px;
+      }
+
+      .sites {
+        top: 3%;
+        left: 16%;
+        position: absolute;
+        left: 0%;
+        width: 91%;
+      }
+
+      .sites img {
+        padding-left: 1px;
+        padding-right: 1px;
+        opacity: 0.6;
+      }
+    }
+
+    @media screen and (height <=420px) {
+      .banner-text {
+        font-size: 400%;
+      }
+
+      .banner-subtext {
+        font-size: 200%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- BANNER -->
-    <div class="bg" id="background"></div>
-    <div class="banner-text"><img src="images/signature wheat.png" alt="artist signature" width="425"></div>
-    <div class="banner-subtext" id="desktop">Illustrator | Character Designer | Game Developer</div>
-    <div class="banner-subtext" id="mobile">Illustrator<br>Character Designer<br>Game Developer</div>
+  <!-- BANNER -->
+  <div class="bg" id="background"></div>
+  <div class="banner-text"><img src="images/signature wheat.png" alt="artist signature" width="425"></div>
+  <div class="banner-subtext" id="desktop">Illustrator | Character Designer | Game Developer</div>
+  <div class="banner-subtext" id="mobile">Illustrator<br>Character Designer<br>Game Developer</div>
 
-    <div class="sites">
-        <a href="https://twitter.com/Raius_"><img src="images/social_media/twitter.png" alt="Twitter icon" width="65" height="60"></a>
-        <a href="https://www.pixiv.net/users/46380655"><img src="images/social_media/pixiv icon.png" alt="Pixiv icon" width="60" height="60"></a>
-        <a href="https://raius.itch.io"><img src="images/social_media/itch-icon.png" alt="itch.io icon" width="60" height="60"></a>
-        <a href="https://www.youtube.com/channel/UCeEa8Hb9JJnjPDVaTy7WmrQ"><img src="images/social_media/youtube-logo.png" alt="itch.io icon" width="60" height="60"></a>
-        <a href="mailto:RaiusGames@hotmail.com"><img src="images/social_media/mail-icon.png" alt="e-mail icon" width="60" height="60"></a>
-        <!-- <a href="https://gumroad.com"><img src="images/social_media/gumroad.png" alt="Gumroad icon" width="60"></a> -->
+  <div class="sites">
+    <a href="https://twitter.com/Raius_"><img src="images/social_media/twitter.png" alt="Twitter icon" width="65"
+        height="60"></a>
+    <a href="https://www.pixiv.net/users/46380655"><img src="images/social_media/pixiv icon.png" alt="Pixiv icon"
+        width="60" height="60"></a>
+    <a href="https://raius.itch.io"><img src="images/social_media/itch-icon.png" alt="itch.io icon" width="60"
+        height="60"></a>
+    <a href="https://www.youtube.com/channel/UCeEa8Hb9JJnjPDVaTy7WmrQ"><img src="images/social_media/youtube-logo.png"
+        alt="itch.io icon" width="60" height="60"></a>
+    <a href="mailto:RaiusGames@hotmail.com"><img src="images/social_media/mail-icon.png" alt="e-mail icon" width="60"
+        height="60"></a>
+    <!-- <a href="https://gumroad.com"><img src="images/social_media/gumroad.png" alt="Gumroad icon" width="60"></a> -->
+  </div>
+  <!-- BANNER END -->
+
+  <!-- OPTIONS -->
+  <div class="panel" id="freelancing">
+    <div class="panel-image"></div>
+
+    <div class="panel-text">
+      <div class="panel-header">
+        <h1>Commission</h1>
+      </div>
+      <div class="panel-description">
+        <p>Illustration<br>Character Design<br>Concept Art<br>3D Model Reference Sheets</p>
+        <p>Available for both personal and professional work.</p>
+      </div>
+      <a href="freelancing.html" class="more-info">More information</a>
     </div>
-    <!-- BANNER END -->
+  </div>
+  </div>
 
-    <!-- OPTIONS -->
-    <div class="panel" id="freelancing">
-            <div class="panel-image"></div>
-
-            <div class="panel-text">
-                <div class="panel-header"><h1>Commission</h1></div>
-                <div class="panel-description">
-                    <p>Illustration<br>Character Design<br>Concept Art<br>3D Model Reference Sheets</p>
-                    <p>Available for both personal and professional work.</p>
-                </div>
-                <a href="freelancing.html" class="more-info">More information</a>
-            </div>
-        </div>
-    </div>
-
-<!--     <div class="panel" id="freelancing">
+  <!--     <div class="panel" id="freelancing">
         <div class="panel-image"></div>
 
         <div class="panel-text">
@@ -377,84 +423,102 @@
     </div>
 </div> -->
 
-    <div class="panel" id="portfolio">
-        <div class="panel-image"></div>
+  <div class="panel" id="portfolio">
+    <div class="panel-image"></div>
 
-        <div class="panel-text">
-            <div class="panel-header"><h1>Portfolio</h1></div>
-            <div class="panel-description">
-                <p>Samples of my illustration work.<br><br>Includes work for clients and personal projects.</p>
-            </div>
-            <a href="gallery.html" class="more-info">More information</a>
-        </div>
+    <div class="panel-text">
+      <div class="panel-header">
+        <h1>Portfolio</h1>
+      </div>
+      <div class="panel-description">
+        <p>Samples of my illustration work.<br><br>Includes work for clients and personal projects.</p>
+      </div>
+      <a href="gallery.html" class="more-info">More information</a>
     </div>
+  </div>
 
-    <div class="panel" id="games">
-        <div class="panel-image"></div>
+  <div class="panel" id="games">
+    <div class="panel-image"></div>
 
-        <div class="panel-text">
-            <div class="panel-header"><h1>Games</h1></div>
-            <div class="panel-description">
-                <p>A brief overview of the games I've made, my role in their development, and links to play them.</p>
-            </div>
-            <a href="games.html" class="more-info">More information</a>
-        </div>
+    <div class="panel-text">
+      <div class="panel-header">
+        <h1>Games</h1>
+      </div>
+      <div class="panel-description">
+        <p>A brief overview of the games I've made, my role in their development, and links to play them.</p>
+      </div>
+      <a href="games.html" class="more-info">More information</a>
     </div>
+  </div>
 
-    <div class="skills-panel">
-        <div class="panel-header"><h1>Skills Summary</h1></div>
-        <div class="panel-description">
-            <div class="skill-category">
-                <h2>2D</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Illustration</li><li>Concept Art</li><li>Character Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>3D</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Modelling</li><li>Texturing</li><li>Rigging</li><li>Animation</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Game Development</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Godot</li><li>Unity</li><li>Raylib</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Programming</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>GDScript</li><li>C</li><li>Python</li><li>JavaScript</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Web Development</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>HTML</li><li>CSS</li><li>JavaScript</li>
-                        <!-- <li>Ruby On Rails</li><li>Vue</li><li>Django</li><li>SQL</li> -->
-                    </ul>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h2>Music</h2>
-                <div class="skill-items">
-                    <ul>
-                        <li>Guitar</li>
-                        <!-- <li>Music Production</li> -->
-                    </ul>
-                </div>
-            </div>
-<!--             <div class="skill-category">
+  <div class="skills-panel">
+    <div class="panel-header">
+      <h1>Skills Summary</h1>
+    </div>
+    <div class="panel-description">
+      <div class="skill-category">
+        <h2>2D</h2>
+        <div class="skill-items">
+          <ul>
+            <li>Illustration</li>
+            <li>Concept Art</li>
+            <li>Character Design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h2>3D</h2>
+        <div class="skill-items">
+          <ul>
+            <li>Modelling</li>
+            <li>Texturing</li>
+            <li>Rigging</li>
+            <li>Animation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h2>Game Development</h2>
+        <div class="skill-items">
+          <ul>
+            <li>Godot</li>
+            <li>Unity</li>
+            <li>Raylib</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h2>Programming</h2>
+        <div class="skill-items">
+          <ul>
+            <li>GDScript</li>
+            <li>C</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h2>Web Development</h2>
+        <div class="skill-items">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <!-- <li>Ruby On Rails</li><li>Vue</li><li>Django</li><li>SQL</li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h2>Music</h2>
+        <div class="skill-items">
+          <ul>
+            <li>Guitar</li>
+            <!-- <li>Music Production</li> -->
+          </ul>
+        </div>
+      </div>
+      <!--             <div class="skill-category">
                 <h2>Others</h2>
                 <div class="skill-items">
                     <ul>
@@ -463,7 +527,7 @@
                     </ul>
                 </div>
             </div> -->
-<!--             <div class="skill-category">
+      <!--             <div class="skill-category">
                 <h2>Currently Learning</h2>
                 <div class="skill-items">
                     <ul>
@@ -472,10 +536,12 @@
                     </ul>
                 </div>
             </div>
- -->        </div>
+ -->
     </div>
-</div>
-    <!-- OPTIONS END -->
+  </div>
+  </div>
+  <!-- OPTIONS END -->
 
 </body>
+
 </html>

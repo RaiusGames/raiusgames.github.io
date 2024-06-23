@@ -2,6 +2,7 @@ const images =
 [
     'url("images/mona-web.jpg")',
     'url("images/amber-web.jpg")',
+    'url("images/commission_images/val.jpg")',
     'url("images/commission_images/chope 2.jpg")',
     'url("images/ambush.jpg")',
     'url("images/commission_images/sol-lake.jpg")',
