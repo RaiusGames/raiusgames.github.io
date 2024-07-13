@@ -56,7 +56,7 @@ a
 #signature
 {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -66,7 +66,7 @@ a
   color: white;
   font-size: 40px;
   position: absolute;
-  top: 62%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
@@ -116,6 +116,8 @@ a
 }
 
 
+  
+
 /* MENU */
 .menu
 {
@@ -159,6 +161,7 @@ a
   background-image: url("images/ambush.jpg");
   background-position: 0 50%;
   opacity: 0.6;
+  z-index: -1;
 }
 
 .menu-item-text
@@ -185,14 +188,12 @@ a
   position: absolute;
   bottom: 0;
   left: 0;
+  mix-blend-mode: screen;
   transition: 0.2s ease-in-out;
 }
 .menu-item-text:hover::after
 {
-  /* width: 0; */
-  /* transform: translate(0, -10vh); */
   height: 8.5vh;
-  mix-blend-mode: screen;
 }
 
 #portfolio
@@ -212,6 +213,13 @@ a
   background-image: url("images/games/3d-test1.jpg");
   background-size: cover;
   background-position: 50% 45%;
+}
+#about
+{
+  background-image: url("images/commission_images/sol-lake.jpg");
+  background-size: cover;
+  background-position: 50% 35%;
+  cursor: default;
 }
 
 @media screen and (max-width: 992px)
@@ -240,6 +248,127 @@ a
   #commission
   {
     background-position: 40% 0;
+  }
+}
+
+
+/* ABOUT */
+.about-section
+{
+  cursor: default;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-container
+{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  width: 100%;
+  height: 70%;
+  padding: 8px;
+  margin: 32px;
+  border-radius: 32px;
+  background-color: var(--bgcolour);
+  color: white;
+}
+
+.card-header
+{
+  position: relative;
+  text-align: center;
+  font-size: 3vw;
+}
+.card-header::after
+{
+  content: "";
+  background: var(--lightblue);
+  height: 0.5vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+.card-header:hover::after
+{
+  width: 0;
+}
+.card-image
+{
+  width: 100%;
+  height: 30%;
+  background-image: url("images/nightwoods.jpeg");
+  background-size: cover;
+}
+#modelling-card
+{
+  background-image: url("images/games/strange-shores3.jpg");
+  background-position: 0 20%;
+}
+#gamedev-card
+{
+  background-image: url("images/games/3d-test2.jpg");
+}
+.card-body
+{
+  font-size: 2vw;
+  padding: 12px;
+  border-radius: 16px;
+  border: 3px solid var(--lightblue);
+  transition: border ease-out 0.1s;
+}
+.card-body:hover
+{
+  border: 3px solid rgba(0,0,0,0);
+}
+@media screen and (width <= 990px)
+{
+  .card-container
+  {
+    flex-direction: column;
+  }
+  .card
+  {
+    width: 70%;
+  }
+  .card-image
+  {
+    height: 70%;
+  }
+  .card-header
+  {
+    font-size: 4vw;
+  }
+  .card-body
+  {
+    font-size: 3vw;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+  }
+  #modelling-card
+  {
+    background-position: 0 40%;
+  }
+  #gamedev-card
+  {
+    background-position: 0 40%;
   }
 }
 
