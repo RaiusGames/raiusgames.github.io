@@ -4,7 +4,7 @@
   --bgcolour: rgb(36, 30, 39);  
   --greendark: #3C4841;
   --greenlight: rgb(200,100,100);
-  --textcolour: #D3D6AA;
+  --textcolour: white;
   --lightblue: #7fBBB3;
   --colourHighlight: rgb(255, 102, 0);
 
@@ -27,6 +27,46 @@ body
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(30, 40, 90);
+  width: 100%;
+  font-size: x-large;
+}
+
+header img
+{
+  padding-top: 32px;
+}
+
+header a
+{
+  padding: 12px;
+  border-radius: 16px;
+  transition: background-color ease-out 0.5s;
+}
+header a:hover
+{
+  background-color: var(--lightblue);
+}
+
+@media screen and (width <= 990px)
+{
+  header
+  {
+    flex-direction: column;
+  }
+  header img
+  {
+    display: none;
+  }
 }
 
 a
@@ -63,7 +103,6 @@ a
 }
 .hero-text
 {
-  color: white;
   font-size: 40px;
   position: absolute;
   top: 60%;
@@ -182,7 +221,8 @@ a
 .menu-item-text::after
 {
   content: "";
-  background: var(--lightblue);
+  background: var(--colourHighlight);
+  opacity: 70%;
   height: 1vh;
   width: 100%;
   position: absolute;
@@ -285,7 +325,6 @@ a
   margin: 32px;
   border-radius: 32px;
   background-color: var(--bgcolour);
-  color: white;
 }
 
 .card-header
@@ -297,7 +336,7 @@ a
 .card-header::after
 {
   content: "";
-  background: var(--lightblue);
+  background: var(--colourHighlight);
   height: 0.5vh;
   width: 100%;
   position: absolute;
@@ -376,16 +415,6 @@ a
 
 /* PORTFOLIO */
 
-header
-{
-  text-align: center;
-  background-color: rgb(30, 40, 90);
-  width: 100%;
-}
-header img
-{
-  padding-top: 32px;
-}
 
 .image-container
 {
@@ -417,3 +446,205 @@ header img
     width: 100%;
   }
 }
+
+
+/* COMMISSION INFO */
+
+.commission-info
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.comm-card
+{
+  position: relative;
+  width: 70%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 32px;
+  gap: 16px;
+  margin: 64px;
+  border: 6px solid white;
+}
+
+#comm-info-card
+{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comm-card-bg
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 25%;
+  border-radius: 32px;
+  background-image: url("images/kerida-elf.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
+  z-index: -1;
+}
+
+.comm-card-left, .comm-card-right
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.comm-card-left
+{
+  justify-content: space-between;
+}
+
+.comm-card-image
+{
+  position: absolute;
+  right: 0;
+  height: 900px;
+}
+.comm-card-image img
+{
+  height: 700px;
+}
+#char-design-img
+{
+  height: 900px;
+}
+#char-ref-img
+{
+  transform: translate(0, 48px);
+}
+#comm-portrait-img
+{
+  height: 750px;
+  transform: translate(-100px, 18px);
+}
+
+.comm-card-header
+{
+  position: relative;
+  text-align: center;
+  padding: 32px;
+  font-size: 50px;
+  font-weight: 600;
+}
+.comm-card-header:after
+{
+  content: "";
+  background: var(--colourHighlight);
+  opacity: 70%;
+  height: 1vh;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  mix-blend-mode: screen;
+  transition: 0.2s ease-in-out;
+}
+.comm-card-header:hover::after
+{
+  width: 0;
+}
+
+.comm-card-price
+{
+  font-size: 46px;
+  font-style: oblique;
+}
+
+.comm-card-body
+{
+  text-align: center;
+  padding: 32px;
+  font-size: 24px;
+}
+.comm-card-body li
+{
+  padding: 16px;
+  font-size: larger;
+  text-decoration: none;
+}
+.comm-card ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comm-card-left button
+{
+  padding: 16px 32px 16px 32px;
+  margin: 32px;
+  border-radius: 32px;
+  font-size: large;
+}
+
+#comm-info-bg
+{
+  background-image: url("images/commission_images/assunta-comm-night.jpg");
+  background-size: cover;
+  background-position: 0 15%;
+}
+#char-design-bg
+{
+  background-image: url("images/kings-raid1.jpg");
+  background-size: cover;
+}
+#char-ref-bg
+{
+  background-image: url("images/commission_images/Model\ Sheet.png");
+  background-size: cover;
+}
+#game-portrait-bg{
+  background-image: url("images/portrait-comm-bg.png");
+  background-size: cover;
+}
+
+@media screen and (width <= 990px)
+{
+  .comm-card
+  {
+    width: 100%;
+    margin: 16px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .comm-card-right
+  {
+    display: none;
+  }
+  #comm-info-card
+  {
+    height: 100%;
+  }
+  .comm-card-header
+  {
+    font-size: 48px;
+  }
+  .comm-card-price
+  {
+    font-size: 36px;
+  }
+  .comm-card-body
+  {
+    font-size: larger;
+  }
+  #char-design-bg
+  {
+    background-image: url("images/commission_images/nova\ transparent.png");
+  }
+}
+
