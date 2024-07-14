@@ -90,8 +90,8 @@ a
   background-image: url("images/mona-web.jpg");
   background-size: cover;
   background-position: 0 40%;
-  filter: blur(8px);
-  opacity: 30%;
+  filter: blur(7px);
+  opacity: 40%;
 }
 #signature
 {
@@ -176,7 +176,6 @@ a
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color: blue; */
 }
 
 .menu-item
@@ -184,7 +183,7 @@ a
   position: relative;
   width: 100vw;
   height: 100vh;
-  opacity: 0.5;
+  opacity: 50%;
   transition: opacity ease-out 0.3s;
 }
 .menu-item:hover
@@ -244,9 +243,9 @@ a
 }
 #commission
 {
-  background-image: url("images/amber-web.jpg");
+  background-image: url("images/commission_images/val.jpg");
   background-size: cover;
-  background-position: 50% 35%;
+  background-position: 50% 13%;
 }
 #games
 {
@@ -256,7 +255,7 @@ a
 }
 #about
 {
-  background-image: url("images/commission_images/sol-lake.jpg");
+  background-image: url("images/amber-web.jpg");
   background-size: cover;
   background-position: 50% 35%;
   cursor: default;
@@ -651,4 +650,117 @@ a
   {
     background-position: 20% 0;
   }
+}
+
+
+
+/* GAME INFO CARDS */
+
+.games-info
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.game-card
+{
+  position: relative;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  gap: 16px;
+  margin: 64px;
+  padding: 32px;
+  border: 6px solid white;
+}
+
+.game-card-bg
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 25%;
+  border-radius: 32px;
+  background-image: url("images/games/strange-shores2.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
+  z-index: -1;
+}
+#millika-bg
+{
+  background-image: url("images/games/millika2.jpg");
+}
+#alchemist-bg
+{
+  background-image: url("images/games/alchemist-banner.jpg");
+}
+#home-bg
+{
+  background-image: url("images/games/home-banner.png");
+}
+#journey-home-bg
+{
+  background-image: url("images/games/journey-home1.jpg");
+}
+
+.game-card-header
+{
+  position: relative;
+  text-align: center;
+  padding: 32px;
+  font-size: 50px;
+  font-weight: 600;
+}
+.game-card-header:after
+{
+  content: "";
+  background: var(--colourHighlight);
+  opacity: 70%;
+  height: 1vh;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  mix-blend-mode: screen;
+  transition: 0.2s ease-in-out;
+}
+.game-card-header:hover::after
+{
+  width: 0;
+}
+
+.game-card-body
+{
+  text-align: center;
+  padding: 32px;
+  font-size: 28px;
+}
+.game-card a
+{
+  text-align: center;
+  padding: 24px;
+  font-size: 24px;
+  border-radius: 32px;
+  background-color: var(--lightblue);
+}
+.game-card-body li
+{
+  padding: 16px;
+  font-size: 24px;
+  text-decoration: none;
+}
+.game-card ul
+{
+  border-radius: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
