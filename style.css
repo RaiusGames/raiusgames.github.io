@@ -616,9 +616,9 @@ a
 {
   .comm-card
   {
-    width: 100%;
+    width: 90%;
     margin: 16px;
-    border: none;
+  border: 2px solid white;
     justify-content: center;
     align-items: center;
   }
@@ -680,6 +680,14 @@ a
   margin: 64px;
   padding: 32px;
   border: 6px solid white;
+}
+
+@media screen and (width <= 990px)
+{
+  .game-card
+  {
+    border: 2px solid white;
+  }
 }
 
 .game-card-bg
