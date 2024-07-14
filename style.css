@@ -772,3 +772,34 @@ a
   padding: 0;
   margin: 0;
 }
+
+
+/* CONTACT LINKS */
+
+.contact
+{
+  color: white;
+  text-align: center;
+}
+
+.contact-sites
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact-sites img
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  opacity: 0.6;
+}
+
+.contact-sites img:hover
+{
+  opacity: 1;
+
+  animation: 0.3s bounce infinite alternate;
+  animation-timing-function: cubic-bezier();
+}
