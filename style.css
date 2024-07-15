@@ -671,7 +671,12 @@ a
   }
   #char-ref-bg
   {
-    background-position: 20% 0;
+    /* background-image: url(images/malin-turnaround.jpg); */
+    background-position: 7% 0;
+  }
+  #game-portrait-bg
+  {
+    background-position: 10% 0;
   }
 }
 
