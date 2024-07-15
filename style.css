@@ -286,6 +286,10 @@ a
   {
     opacity: 1;
   }
+  .hero-arrow, .up-arrow
+  {
+    display: none;
+  }
   #portfolio
   {
     background-position: 52% 0;
