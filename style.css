@@ -1,7 +1,7 @@
 :root
 {
   /* --bgcolour: #1E2326; */
-  --bgcolour: rgb(36, 30, 39);  
+  --bgcolour: rgb(35, 30, 50);  
   --greendark: #3C4841;
   --greenlight: rgb(200,100,100);
   --textcolour: white;
@@ -11,6 +11,19 @@
   /* scroll-behavior: smooth; */
 }
 
+@font-face {
+  font-family: lilita-one;
+  src: url(fonts/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: outfit-bold;
+  src: url(fonts/Outfit-Bold.ttf);
+}
+@font-face {
+  font-family: inclusive-sans;
+  src: url(fonts/InclusiveSans-Regular.ttf);
+}
+
 ::selection
 {
     background-color: var(--colourHighlight);
@@ -18,7 +31,7 @@
 
 body
 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'inclusive-sans', 'outfit-variable', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: var(--bgcolour);
   color: var(--textcolour);
   display: flex;
@@ -793,13 +806,13 @@ a
   padding-left: 10px;
   padding-right: 10px;
   width: fit-content;
-  opacity: 0.6;
+  opacity: 60%;
 }
 
 .contact-sites img:hover
 {
-  opacity: 1;
+  opacity: 100%;
 
-  animation: 0.3s bounce infinite alternate;
-  animation-timing-function: cubic-bezier();
+  /* animation: 0.3s bounce infinite alternate; */
+  /* animation-timing-function: cubic-bezier(); */
 }
