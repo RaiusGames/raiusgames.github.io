@@ -612,6 +612,14 @@ a
   font-size: 24px;
   border-radius: 32px;
   background-color: var(--lightblue);
+  transition: 0.2s ease-out;
+}
+.comm-card a:hover
+{
+  border-radius: 8px;
+  background-color: var(--colourHighlight);
+  padding: 26px;
+  font-size: 26px;
 }
 
 #comm-info-bg
@@ -786,7 +794,16 @@ a
   font-size: 24px;
   border-radius: 32px;
   background-color: var(--lightblue);
+  transition: 0.2s ease-out;
 }
+.game-card a:hover
+{
+  border-radius: 8px;
+  background-color: var(--colourHighlight);
+  padding: 26px;
+  font-size: 26px;
+}
+
 .game-card-body li
 {
   padding: 16px;
