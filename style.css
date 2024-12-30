@@ -293,7 +293,8 @@ a
   }
   #portfolio
   {
-    background-position: 52% 0;
+    background-size: cover;
+    background-position: 40% 0;
   }
   #commission
   {
