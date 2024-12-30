@@ -90,6 +90,7 @@ a
 
 
 
+
 /* HERO */
 .hero
 {
@@ -102,7 +103,7 @@ a
   width: 100vw;
   background-image: url("images/mona-web.jpg");
   background-size: cover;
-  background-position: 0 40%;
+  background-position: 0 45%;
   filter: blur(7px);
   opacity: 40%;
 }
@@ -250,28 +251,21 @@ a
 
 #portfolio
 {
-  background-image: url("images/ambush.jpg");
-  background-size: cover;
-  background-position: 65% 25%;
+  background-image: url("images/kerida-sleep.jpeg");
+  background-size: 120%;
+  background-position: 85% 45%;
 }
 #commission
 {
-  background-image: url("images/commission_images/val.jpg");
+  background-image: url("images/commission_images/laylin-riverside-web.jpg");
   background-size: cover;
-  background-position: 50% 13%;
+  background-position: 30% 30%;
 }
 #games
 {
   background-image: url("images/games/3d-test1.jpg");
   background-size: cover;
   background-position: 50% 45%;
-}
-#about
-{
-  background-image: url("images/amber-web.jpg");
-  background-size: cover;
-  background-position: 50% 35%;
-  cursor: default;
 }
 
 @media screen and (max-width: 992px)
@@ -305,135 +299,12 @@ a
   {
     background-position: 77% 0;
   }
-  #about
-  {
-    background-position: 33% 0%;
-  }
-}
-
-
-/* ABOUT */
-.about-section
-{
-  cursor: default;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card-container
-{
-  width: 90%;
-  height: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.card
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 8px;
-  width: 100%;
-  height: 70%;
-  padding: 8px;
-  margin: 32px;
-  border-radius: 32px;
-  background-color: rgba(10,20,40,0.5);
-  backdrop-filter: blur(15px);
-}
-
-.card-header
-{
-  position: relative;
-  text-align: center;
-  font-size: 3vw;
-}
-.card-header::after
-{
-  content: "";
-  background: var(--colourHighlight);
-  height: 0.5vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: 0.2s ease-in-out;
-}
-.card-header:hover::after
-{
-  width: 0;
-}
-.card-image
-{
-  width: 100%;
-  height: 30%;
-  background-image: url("images/nightwoods.jpeg");
-  background-size: cover;
-}
-#modelling-card
-{
-  background-image: url("images/games/strange-shores3.jpg");
-  background-position: 0 20%;
-}
-#gamedev-card
-{
-  background-image: url("images/games/3d-test2.jpg");
-}
-.card-body
-{
-  font-size: 2vw;
-  padding: 12px;
-  border-radius: 16px;
-  border: 3px solid var(--lightblue);
-  transition: border ease-out 0.1s;
-}
-.card-body:hover
-{
-  border: 3px solid rgba(0,0,0,0);
-}
-@media screen and (width <= 990px)
-{
-  .card-container
-  {
-    flex-direction: column;
-  }
-  .card
-  {
-    width: 70%;
-  }
-  .card-image
-  {
-    height: 70%;
-  }
-  .card-header
-  {
-    font-size: 4vw;
-  }
-  .card-body
-  {
-    font-size: 3vw;
-    padding: 0;
-    border-radius: 0;
-    border: none;
-  }
-  #modelling-card
-  {
-    background-position: 0 40%;
-  }
-  #gamedev-card
-  {
-    background-position: 0 40%;
-  }
 }
 
 
 
+
+  
 /* PORTFOLIO */
 
 
