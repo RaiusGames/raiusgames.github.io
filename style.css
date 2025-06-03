@@ -251,9 +251,9 @@ a
 
 #portfolio
 {
-  background-image: url("images/kerida-sleep.jpeg");
+  background-image: url("images/emerald.jpeg");
   background-size: 120%;
-  background-position: 85% 45%;
+  background-position: 75% 45%;
 }
 #commission
 {
@@ -294,7 +294,7 @@ a
   #portfolio
   {
     background-size: cover;
-    background-position: 40% 0;
+    background-position: 54% 0;
   }
   #commission
   {
@@ -507,7 +507,7 @@ a
 }
 #char-ref-bg
 {
-  background-image: url("images/commission_images/Model\ Sheet.png");
+  background-image: url("images/nalia-reference.jpg");
   background-size: cover;
 }
 #game-portrait-bg{
@@ -551,8 +551,9 @@ a
   }
   #char-ref-bg
   {
-    /* background-image: url(images/malin-turnaround.jpg); */
-    background-position: 7% 0;
+    background-image: url(images/nalia-reference.jpg);
+    background-position: 13% 0;
+    background-size: 450%;
   }
   #game-portrait-bg
   {
