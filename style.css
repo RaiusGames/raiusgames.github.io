@@ -691,6 +691,11 @@ a
   margin: 0;
 }
 
+#game-disclaimer
+{
+  text-align: center;
+  width: 50%;
+}
 
 /* CONTACT LINKS */
 
