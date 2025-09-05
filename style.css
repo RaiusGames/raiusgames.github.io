@@ -101,7 +101,7 @@ a
 {
   height: 100vh;
   width: 100vw;
-  background-image: url("images/mona-web.jpg");
+  background-image: url("images/meetAshe.jpg");
   background-size: cover;
   background-position: 0 45%;
   filter: blur(7px);
@@ -251,7 +251,7 @@ a
 
 #portfolio
 {
-  background-image: url("images/emerald.jpeg");
+  background-image: url("images/night6.jpg");
   background-size: 120%;
   background-position: 75% 45%;
 }
@@ -610,6 +610,10 @@ a
   background-size: cover;
   background-position: 50% 20%;
   z-index: -1;
+}
+#alchemist-remake-bg
+{
+  background-image: url("images/meetAshe.jpg");
 }
 #millika-bg
 {
