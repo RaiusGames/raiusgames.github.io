@@ -417,12 +417,12 @@ a
 }
 #char-ref-img
 {
-  transform: translate(0, 48px);
+  transform: translate(-80px, 48px);
 }
 #comm-portrait-img
 {
   height: 750px;
-  transform: translate(-100px, 18px);
+  transform: translate(-100px, 36px);
 }
 
 .comm-card-header
@@ -511,7 +511,7 @@ a
   background-size: cover;
 }
 #game-portrait-bg{
-  background-image: url("images/portrait-comm-bg.png");
+  background-image: url("images/vn-sample.png");
   background-size: cover;
 }
 
@@ -613,7 +613,7 @@ a
 }
 #alchemist-remake-bg
 {
-  background-image: url("images/meetAshe.jpg");
+  background-image: url("images/vn-sample.png");
 }
 #millika-bg
 {
