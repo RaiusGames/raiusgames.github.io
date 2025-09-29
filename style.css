@@ -43,12 +43,14 @@ header
   align-items: center;
   text-align: center;
   background-color: rgb(30, 40, 90);
+  height: 120px;
   width: 100%;
   font-size: x-large;
 }
 
 header img
 {
+  height: 110px;
   padding-top: 32px;
 }
 
