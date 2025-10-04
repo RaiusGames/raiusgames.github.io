@@ -39,7 +39,7 @@ header
 {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: rgb(45, 70, 55);
@@ -49,24 +49,34 @@ header
 .header-left, .header-right
 {
   display: flex;
-  justify-content: space-evenly;
-  gap: 128px;
+  align-items: center;
+  gap: 16px;
+  /* padding: 16px; */
 }
 header img
 {
-  height: 110px;
-  padding-top: 32px;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 0px;
+  height: 100px;
+}
+.header-left a
+{
+  margin: 0px;
+  padding: 6px;
 }
 
 header a
 {
-  padding: 12px;
+  padding: 16px;
   border-radius: 16px;
-  transition: background-color ease-out 0.5s;
+  /* transition: background-color ease-out 0.5s; */
+  transition: padding ease-out 0.3s;
 }
 header a:hover
 {
   background-color: var(--lightblue);
+  padding: 20px;
 }
 
 @media screen and (width <= 990px)
@@ -84,9 +94,19 @@ header a:hover
   {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 8px;
+    justify-content: center;
+    gap: 24px;
   }
+  .header-left
+  {
+    padding-left: 8px;
+    padding-top: 8px;
+  }
+  .header-links-left, .header-links-right
+  {
+    justify-content: center;
+  }
+  
   header a
   {
     padding: 8px;
@@ -633,15 +653,6 @@ a
   border-bottom: 6px solid white;
 }
 
-@media screen and (width <= 990px)
-{
-  .game-card
-  {
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-  }
-}
-
 .game-card-bg
 {
   position: absolute;
@@ -652,6 +663,25 @@ a
   background-size: cover;
   background-position: 50% 20%;
   z-index: -1;
+
+  animation-name: bg-anim;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@media screen and (width <= 990px)
+{
+  .game-card
+  {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+  .game-card-bg
+  {
+    animation-name: bg-anim-mobile;
+  }
 }
 #alchemist-remake-bg
 {
