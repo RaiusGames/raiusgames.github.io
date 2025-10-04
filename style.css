@@ -149,11 +149,11 @@ a
 {
   from
   {
-    translate: 0, 0;
+    translate: 0px, 0px;
   }
   to
   {
-    translate: 0, -20px;
+    translate: 0px, -20px;
   }
 }
 
@@ -327,6 +327,7 @@ a
 }
 .image-container img
 {
+  opacity: 0.0;
   border-radius: 16px;
 }
 @media screen and (width <= 990px)
@@ -356,16 +357,17 @@ a
 .comm-card
 {
   position: relative;
-  width: 70%;
+  width: 100%;
   height: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-radius: 32px;
+  /* border-radius: 32px; */
   gap: 16px;
   margin: 64px;
-  border: 6px solid white;
+  border-top: 6px solid white;
+  border-bottom: 6px solid white;
 }
 
 #comm-info-card
@@ -380,12 +382,45 @@ a
   width: 100%;
   height: 100%;
   opacity: 25%;
-  border-radius: 32px;
+  /* border-radius: 32px; */
   background-image: url("images/emerald.jpeg");
   background-size: cover;
   background-position: 50% 20%;
   z-index: -1;
+
+  animation-name: bg-anim;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes bg-anim
+{
+  from {background-position: 0% 100%;}
+  to {background-position: 0% 0%;}
+}
+
+@keyframes bg-anim-mobile
+{
+  from {background-position: 0% 0%;}
+  to {background-position: 100% 0%;}
+}
+
+@keyframes fade
+{
+  from {opacity: 0}
+  to {opacity: var(--maxOpacity)}
+}
+
+.fade
+{
+  --maxOpacity: 1.0;
+  --delayOffset: 0s;
+  animation: fade 1.5s forwards;
+  animation-delay: var(--delayOffset);
+}
+
 
 .comm-card-left, .comm-card-right
 {
@@ -400,30 +435,6 @@ a
 .comm-card-left
 {
   justify-content: space-between;
-}
-
-.comm-card-image
-{
-  position: absolute;
-  right: 0;
-  height: 900px;
-}
-.comm-card-image img
-{
-  height: 700px;
-}
-#char-design-img
-{
-  height: 900px;
-}
-#char-ref-img
-{
-  transform: translate(-80px, 48px);
-}
-#comm-portrait-img
-{
-  height: 750px;
-  transform: translate(-100px, 36px);
 }
 
 .comm-card-header
@@ -497,10 +508,11 @@ a
 
 #comm-info-bg
 {
-  background-image: url("images/commission_images/assunta-comm-night.jpg");
+  background-image: url("images/meet-lia-izara-web.jpg");
   background-size: cover;
-  background-position: 0 15%;
+  /* background-position: 0 15%; */
 }
+
 #char-design-bg
 {
   background-image: url("images/kings-raid1.jpg");
@@ -512,6 +524,7 @@ a
   background-size: cover;
 }
 #game-portrait-bg{
+  animation: none;
   background-image: url("images/vn-sample.png");
   background-size: cover;
 }
@@ -520,7 +533,7 @@ a
 {
   .comm-card
   {
-    width: 90%;
+    width: 100%;
     margin: 16px;
     border: 2px solid white;
     justify-content: center;
@@ -546,25 +559,35 @@ a
   {
     font-size: larger;
   }
-  #char-design-bg
+  .comm-card-bg
   {
-    background-image: url("images/commission_images/nova\ transparent.png");
+    animation-name: bg-anim-mobile;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
   #char-ref-bg
   {
     background-image: url(images/nalia-reference.jpg);
-    background-position: 13% 0%;
-    background-size: 450%;
+    /* background-position: 13% 0%; */
+    /* background-size: 450%; */
   }
   #game-portrait-bg
   {
-    background-position: 65% 0;
+    animation-name: bg-anim-mobile;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
 }
 
 
 
 /* GAME INFO CARDS */
+
+#game-disclaimer
+{
+  font-size: x-large;
+}
 
 .games-info
 {
@@ -579,24 +602,26 @@ a
 .game-card
 {
   position: relative;
-  width: 70%;
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 32px;
   gap: 16px;
   margin: 64px;
-  padding: 32px;
-  border: 6px solid white;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-top: 6px solid white;
+  border-bottom: 6px solid white;
 }
 
 @media screen and (width <= 990px)
 {
   .game-card
   {
-    border: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
   }
 }
 
@@ -606,7 +631,6 @@ a
   width: 100%;
   height: 100%;
   opacity: 25%;
-  border-radius: 32px;
   background-image: url("images/games/strange-shores2.jpg");
   background-size: cover;
   background-position: 50% 20%;
