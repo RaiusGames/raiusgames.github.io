@@ -381,7 +381,7 @@ a
   height: 100%;
   opacity: 25%;
   border-radius: 32px;
-  background-image: url("images/kerida-elf.jpg");
+  background-image: url("images/emerald.jpeg");
   background-size: cover;
   background-position: 50% 20%;
   z-index: -1;
@@ -522,7 +522,7 @@ a
   {
     width: 90%;
     margin: 16px;
-  border: 2px solid white;
+    border: 2px solid white;
     justify-content: center;
     align-items: center;
   }
@@ -553,12 +553,12 @@ a
   #char-ref-bg
   {
     background-image: url(images/nalia-reference.jpg);
-    background-position: 13% 0;
+    background-position: 13% 0%;
     background-size: 450%;
   }
   #game-portrait-bg
   {
-    background-position: 10% 0;
+    background-position: 65% 0;
   }
 }
 
