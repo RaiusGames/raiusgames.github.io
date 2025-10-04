@@ -42,11 +42,16 @@ header
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  background-color: rgb(30, 40, 90);
+  background-color: rgb(45, 70, 55);
   width: 100%;
   font-size: x-large;
 }
-
+.header-left, .header-right
+{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 128px;
+}
 header img
 {
   height: 110px;
@@ -68,7 +73,19 @@ header a:hover
 {
   header
   {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .logo
+  {
+    flex-grow: 2;
+  }
+  .header-left, .header-right
+  {
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    gap: 8px;
   }
   header a
   {
