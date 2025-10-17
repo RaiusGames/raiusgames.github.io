@@ -24,7 +24,7 @@
 
 body
 {
-  font-family: 'inclusive-sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Fira Sans', 'inclusive-sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: var(--bgcolour);
   color: var(--textcolour);
   display: flex;
@@ -414,6 +414,164 @@ a
   justify-content: space-evenly;
 }
 
+.commission-modal
+{
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgba(35, 30, 50, 1.0); */
+  background: linear-gradient(to top left, var(--bgcolour) 80%, var(--colourHighlight) 20%);
+  display: none;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container
+{
+  border-radius: 16px;
+  width: 50%;
+  height: 50%;
+  background-color: var(--bgcolour);
+  color: var(--textcolour);
+  border: 3px solid var(--colourHighlight);
+  padding: 24px;
+
+  animation-name: slide-in;
+  animation-duration: 1s;
+}
+
+.slide-out
+{
+  animation-name: slide-in;
+  animation-duration: 1s;
+}
+
+.request-form
+{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal-background
+{
+  position: sticky;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+}
+
+@keyframes slide-in
+{
+  from
+  {
+    transform: translateY(100%);
+  }
+  to
+  {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-out
+{
+  from
+  {
+    transform: translateY(0%);
+  }
+  to
+  {
+    transform: translateY(100%);
+  }
+}
+
+.input-section
+{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.request-form input
+{
+  width: 50%;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+.request-form textarea
+{
+  width: 80%;
+  height: 100%;
+  resize: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+select
+{
+  padding: 12px;
+}
+
+.comm-details
+{
+  width: 100%;
+  height: 100%;
+}
+.commission-modal form input[type="submit"]
+{
+  width: 30%;
+  height: 3rem;
+  margin: 2rem;
+}
+
+
+.close-button
+{
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 18px;
+  background-color: var(--lightblue);
+  transition: 0.2s ease-out;
+  color: white;
+  padding: 12px 18px 12px 18px;
+
+}
+.close-button:hover
+{
+  border-radius: 8px;
+  background-color: var(--colourHighlight);
+  font-size: 26px;
+}
+
+.form-submit-button
+{
+  text-align: center;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: var(--lightblue);
+  transition: 0.2s ease-out;
+  color: white;
+  font-size: 24px;
+  width: 30%;
+}
+.form-submit-button:hover
+{
+  border-radius: 8px;
+  background-color: var(--colourHighlight);
+  font-size: 26px;
+}
+
 .comm-card
 {
   position: relative;
@@ -640,6 +798,20 @@ a
   }
 }
 
+.thank-you
+{
+  position: relative;
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  gap: 16px;
+  margin: 64px;
+  border: 6px solid white;
+}
 
 
 /* GAME INFO CARDS */

@@ -7,22 +7,69 @@
   <title>Commission</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="images/icon1.jpg">
-  <script src="script.js" defer></script>
+  <script src="commission-form.js" defer></script>
 </head>
 
 <body>
 
-<header>
-  <div class="header-left">
-    <a href="./index.html"><img src="images/signature wheat.png"></a>
-  </div>
-  <div class="header-right">
-    <a href="portfolio.html">portfolio</a>
-    <a href="commission.html">commission</a>
-    <a href="./games.html">games</a>
-    <a href="https://linktr.ee/raius">links</a>
-  </div>
-</header>
+  <header>
+    <div class="header-left">
+      <a href="./index.html"><img src="images/signature wheat.png"></a>
+    </div>
+    <div class="header-right">
+      <a href="portfolio.html">portfolio</a>
+      <a href="commission.html">commission</a>
+      <a href="./games.html">games</a>
+      <a href="https://linktr.ee/raius">links</a>
+    </div>
+  </header>
+  
+
+  
+  <dialog class="commission-modal fade">
+    <h1>Commission Request Form</h1>
+    <div class="form-container">
+      <div class="close-button">
+        X
+      </div>
+
+      <form class="request-form" action="https://formsubmit.co/raiusgames@hotmail.com" method="POST">
+        <div class="input-section">
+          <label for="email">*Email:</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        </div>
+
+        <div class="input-section">
+          <label for="subject">*Commission Type:</label>
+          <select id="subject" name="subject">
+            <option value="Illustration" selected>Illustration</option>
+            <option value="Character Design">Character Design</option>
+            <option value="Character Reference">Character Reference</option>
+            <option value="Game Portrait">Game Portrait</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="comm-details">
+          <label for="message">*Commission Details:</label>
+          <textarea id="message" name="message" rows="5" cols="33"
+          placeholder="Let me know what you'd like me to draw! If possible, please include an image link to any relevant characters.&#10;&#10;If you have no specific ideas in mind, we can come up with an idea together."
+          required></textarea>
+        </div>
+
+        <!-- <input type="hidden" name="_next" -->
+        <!-- value="https://raiusgames.github.io/thank-you.html"> -->
+        <input type="hidden" name="_next"
+        value="http://localhost:9999/thank-you.html">
+
+        <!-- <input type="hidden" name="_captcha" value="false"> -->
+
+        <input type="submit" value="Send" class="form-submit-button">
+      </form>
+    <div>
+  </dialog>
+
+
 
   <div class="comm-card fade" id="comm-info-card">
     <div class="comm-card-bg" id="comm-info-bg"></div>
@@ -49,16 +96,8 @@
           <li>-> €40+ for complex backgrounds</li>
         </ul>
       </div>
-      <a href="mailto:raiusgames@hotmail.com?&subject=Illustration Commission Request&body=
-Please enter commission details here and attach any reference images or links to view them elsewhere (Google Drive, etc.)%0D%0A
-If you don't have a specific idea in mind, I'm happy to come up with one myself!
-%0D%0A%0D%0APlease delete this message before you send the email, and if you have any questions please feel free to ask!">Start Email</a>
+      <a href="javascript:void(0)" class="email-button">Start Email</a>
     </div>
-    <!-- <div class="comm-card-right">
-      <div class="comm-card-image">
-        <img src="images/ashe.png">
-      </div>
-    </div> -->
   </div>
 
   <div class="comm-card fade">
@@ -78,10 +117,7 @@ If you don't have a specific idea in mind, I'm happy to come up with one myself!
           <li>-> €30 discount for redesigns of existing characters</li>
         </ul>
       </div>
-      <a href="mailto:raiusgames@hotmail.com?&subject=Character Design Commission Request&body=
-Please enter commission details here and attach any reference images or links to view them elsewhere (Google Drive, etc.)%0D%0A
-If you don't have a specific idea in mind, I'm happy to come up with one myself!
-%0D%0A%0D%0APlease delete this message before you send the email, and if you have any questions please feel free to ask!">Start Email</a>
+      <a href="javascript:void(0)" class="email-button">Start Email</a>
     </div>
   </div>
 
@@ -97,10 +133,7 @@ If you don't have a specific idea in mind, I'm happy to come up with one myself!
           <li>-> €20+ per expression portrait (shoulders up)</li>
         </ul>
       </div>
-      <a href="mailto:raiusgames@hotmail.com?&subject=Reference Commission Request&body=
-Please enter commission details here and attach any reference images or links to view them elsewhere (Google Drive, etc.)%0D%0A
-If you don't have a specific idea in mind, I'm happy to come up with one myself!
-%0D%0A%0D%0APlease delete this message before you send the email, and if you have any questions please feel free to ask!">Start Email</a>
+      <a href="javascript:void(0)" class="email-button">Start Email</a>
     </div>
     <!-- <div class="comm-card-right">
       <div class="comm-card-image">
@@ -127,10 +160,7 @@ If you don't have a specific idea in mind, I'm happy to come up with one myself!
           <li>-> €70+ per new pose</li>
         </ul>
       </div>
-      <a href="mailto:raiusgames@hotmail.com?&subject=Portrait Commission Request&body=
-Please enter commission details here and attach any reference images or links to view them elsewhere (Google Drive, etc.)%0D%0A
-If you don't have a specific idea in mind, I'm happy to come up with one myself!
-%0D%0A%0D%0APlease delete this message before you send the email, and if you have any questions please feel free to ask!">Start Email</a>
+      <a href="javascript:void(0)" class="email-button">Start Email</a>
     </div>
   </div>
 
@@ -143,11 +173,6 @@ If you don't have a specific idea in mind, I'm happy to come up with one myself!
           height="60"></a>
       <a href="https://www.pixiv.net/users/46380655"><img src="images/social_media/pixiv icon.png" alt="Pixiv icon"
           width="60" height="60"></a>
-      <a href="mailto:raiusgames@hotmail.com?&subject=Commission Request&body=
-Please enter commission details here and attach any reference images or links to view them elsewhere (Google Drive, etc.)%0D%0A
-If you don't have a specific idea in mind, I'm happy to come up with one myself!
-%0D%0A%0D%0APlease delete this message before you send the email, and if you have any questions please feel free to ask!"><img src="images/social_media/mail-icon.png" alt="e-mail icon" width="60"
-          height="60"></a>
     </div>
   </div>
 

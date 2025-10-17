@@ -1,6 +1,5 @@
 const imageRows = document.querySelectorAll(".image-row");
 
-
 let offset = 0;
 for(const row of imageRows)
 {
