@@ -750,9 +750,14 @@ select
 
 @media screen and (width <= 990px)
 {
+  .commission-modal
+  {
+    height: 100%;
+  }
   .form-container
   {
     width: 90%;
+    height: 70%;
   }
   .commission-modal h1
   {
@@ -773,9 +778,14 @@ select
     text-align: center;
     width: 100%;
   }
-  .input-section textarea
+  .request-form textarea
   {
     width: 100%;
+  }
+  select
+  {
+    width: 100%;
+    text-align: center;
   }
   
   .comm-card
