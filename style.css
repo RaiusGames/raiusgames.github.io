@@ -418,8 +418,8 @@ a
 {
   width: 100vw;
   height: 100vh;
-  /* background-color: rgba(35, 30, 50, 1.0); */
-  background: linear-gradient(to top left, var(--bgcolour) 80%, var(--colourHighlight) 20%);
+  background-color: rgba(35, 30, 50, 1.0);
+  /* background: linear-gradient(to top left, var(--bgcolour) 80%, var(--colourHighlight) 20%); */
   display: none;
   flex-direction: column;
   color: white;
@@ -538,6 +538,8 @@ select
 {
   position: absolute;
   text-align: center;
+  left: 30px;
+  top: 30px;
   cursor: pointer;
   font-size: 24px;
   border-radius: 18px;
@@ -748,6 +750,34 @@ select
 
 @media screen and (width <= 990px)
 {
+  .form-container
+  {
+    width: 90%;
+  }
+  .commission-modal h1
+  {
+    display: none;
+  }
+  .close-button
+  {
+    top: 16px;
+    left: 16px;
+  }
+  .input-section
+  {
+    flex-direction: column;
+    width: 100%;
+  }
+  .input-section input
+  {
+    text-align: center;
+    width: 100%;
+  }
+  .input-section textarea
+  {
+    width: 100%;
+  }
+  
   .comm-card
   {
     width: 100%;
