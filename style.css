@@ -183,7 +183,6 @@ a
 .hero-arrow:hover, .up-arrow:hover
 {
   animation: 0.3s bounce infinite alternate;
-  cursor: pointer;
 }
 .up-arrow
 {
@@ -273,10 +272,6 @@ a
   color: white;
   overflow-wrap: anywhere;
 }
-.menu-item:hover
-{
-  cursor: pointer;
-}
 .menu-item-text::after
 {
   content: "";
@@ -297,7 +292,7 @@ a
 
 #portfolio
 {
-  background-image: url("images/night6.jpg");
+  background-image: url("images/commission_images/hope-reunion-web.jpg");
   background-size: 120%;
   background-position: 75% 45%;
 }
@@ -540,7 +535,6 @@ select
   text-align: center;
   left: 30px;
   top: 30px;
-  cursor: pointer;
   font-size: 24px;
   border-radius: 18px;
   background-color: var(--lightblue);
@@ -559,7 +553,6 @@ select
 .form-submit-button
 {
   text-align: center;
-  cursor: pointer;
   border-radius: 12px;
   background-color: var(--lightblue);
   transition: 0.2s ease-out;
