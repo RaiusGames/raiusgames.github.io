@@ -79,12 +79,13 @@ header a
   padding: 16px;
   border-radius: 16px;
   /* transition: background-color ease-out 0.5s; */
-  transition: padding ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 header a:hover
 {
   background-color: var(--lightblue);
-  padding: 20px;
+  /* padding: 20px; */
+  scale: 110%;
 }
 
 @media screen and (width <= 990px)
@@ -546,8 +547,10 @@ select
 .close-button:hover
 {
   border-radius: 8px;
+  cursor: pointer;
   background-color: var(--colourHighlight);
-  font-size: 26px;
+  /* font-size: 26px; */
+  scale: 115%;
 }
 
 .form-submit-button
@@ -564,7 +567,9 @@ select
 {
   border-radius: 8px;
   background-color: var(--colourHighlight);
-  font-size: 26px;
+  /* font-size: 26px; */
+  scale: 115%;
+  cursor: pointer;
 }
 
 .comm-card
@@ -715,8 +720,7 @@ select
 {
   border-radius: 8px;
   background-color: var(--colourHighlight);
-  padding: 26px;
-  font-size: 26px;
+  scale: 115%;
 }
 
 #comm-info-bg
@@ -977,7 +981,8 @@ select
 {
   border-radius: 8px;
   background-color: var(--colourHighlight);
-  padding: 26px;
+  /* padding: 26px; */
+  scale: 110%;
   font-size: 26px;
 }
 
@@ -1021,11 +1026,13 @@ select
   padding-right: 10px;
   width: fit-content;
   opacity: 60%;
+  transition: 0.2s ease-out;
 }
 
 .contact-sites img:hover
 {
   opacity: 100%;
+  scale: 115%;
 
   /* animation: 0.3s bounce infinite alternate; */
   /* animation-timing-function: cubic-bezier(); */
