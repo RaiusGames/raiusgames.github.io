@@ -631,6 +631,12 @@ select
   to {opacity: var(--maxOpacity)}
 }
 
+@keyframes slide-up
+{
+  from {transform: 150vw 0;}
+  to {transform: 0 0;}
+}
+
 .fade
 {
   --maxOpacity: 1.0;
@@ -737,7 +743,7 @@ select
 }
 #char-ref-bg
 {
-  background-image: url("images/nalia-reference.jpg");
+  background-image: url("images/commission_images/ingenuity_design.jpg");
   background-size: cover;
 }
 #game-portrait-bg{
