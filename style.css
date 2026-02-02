@@ -148,9 +148,9 @@ a
 {
   height: 100vh;
   width: 100vw;
-  background-image: url("images/meetAshe.jpg");
+  background-image: url("images/kerida-lake.jpeg");
   background-size: cover;
-  background-position: 0 45%;
+  background-position: 0% 75%;
   filter: blur(7px);
   opacity: 40%;
 }
@@ -241,14 +241,17 @@ a
 .menu-item
 {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 30vh;
   opacity: 50%;
+  border-radius: 32px;
+  border: solid rgba(255,255,255,0) 3px;
   transition: opacity ease-out 0.3s;
 }
 .menu-item:hover
 {
   opacity: 1;
+  border: solid;
 }
 
 .menu-item-bg
@@ -259,12 +262,13 @@ a
   background-image: url("images/ambush.jpg");
   background-position: 0 50%;
   opacity: 0.6;
+  border-radius: 32px;
   z-index: -1;
 }
 
 .menu-item-text
 {
-  font-size: 13vw;
+  font-size: 6vw;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -273,29 +277,29 @@ a
   color: white;
   overflow-wrap: anywhere;
 }
-.menu-item-text::after
-{
-  content: "";
-  background: var(--colourHighlight);
-  opacity: 70%;
-  height: 1vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  mix-blend-mode: screen;
-  transition: 0.2s ease-in-out;
-}
-.menu-item-text:hover::after
-{
-  height: 8.5vh;
-}
+/* .menu-item-text::after */
+/* { */
+  /* content: ""; */
+  /* background: var(--colourHighlight); */
+  /* opacity: 70%; */
+  /* height: 1vh; */
+  /* width: 100%; */
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* left: 0; */
+  /* mix-blend-mode: screen; */
+  /* transition: 0.2s ease-in-out; */
+/* } */
+/* .menu-item-text:hover::after */
+/* { */
+  /* height: 8.5vh; */
+/* } */
 
 #portfolio
 {
-  background-image: url("images/emerald.jpeg");
+  background-image: url("images/cinematic\ tests\ 1.jpg");
   background-size: 120%;
-  background-position: 75% 45%;
+  background-position: 0% 43%;
 }
 #commission
 {
@@ -336,26 +340,26 @@ a
   #portfolio
   {
     background-size: cover;
-    background-position: 30% 0;
+    background-position: 0% 0;
   }
   #commission
   {
     background-position: 77% 0;
   }
-  .hero-image
-  {
-    animation-name: bg-anim-mobile;
-    animation-duration: 20s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-  }
-  .menu-item-bg
-  {
-    animation-name: bg-anim-mobile;
-    animation-duration: 20s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-  }
+  /* .hero-image */
+  /* { */
+    /* animation-name: bg-anim-mobile; */
+    /* animation-duration: 20s; */
+    /* animation-direction: alternate; */
+    /* animation-iteration-count: infinite; */
+  /* } */
+  /* .menu-item-bg */
+  /* { */
+    /* animation-name: bg-anim-mobile; */
+    /* animation-duration: 20s; */
+    /* animation-direction: alternate; */
+    /* animation-iteration-count: infinite; */
+  /* } */
 }
 
 
@@ -782,6 +786,11 @@ select
   /* background-position: 0 15%; */
 }
 
+#cinematic-commission-bg
+{
+  background-image: url("images/cinematic\ tests\ 1.jpg");
+  background-size: cover;
+}
 #char-design-bg
 {
   background-image: url("images/kings-raid1.jpg");
