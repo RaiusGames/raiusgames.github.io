@@ -801,6 +801,11 @@ select
   background-image: url("images/commission_images/ingenuity_design.jpg");
   background-size: cover;
 }
+#char-single-bg
+{
+  background-image: url("images/commission_images/lantern.jpg");
+  background-size: cover;
+}
 #game-portrait-bg{
   background-image: url("images/vn-sample.png");
   background-size: cover;
