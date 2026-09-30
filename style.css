@@ -225,8 +225,8 @@ a
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin: 64px;
+  /* gap: 16px; */
+  /* margin: 64px; */
 }
 .link-area
 {
@@ -241,17 +241,18 @@ a
 .menu-item
 {
   position: relative;
-  width: 90vw;
+  width: 100vw;
   height: 30vh;
   opacity: 50%;
-  border-radius: 32px;
-  border: solid rgba(255,255,255,0) 3px;
+  /* border-radius: 32px; */
+  /* border: solid rgba(255,255,255,0) 3px; */
   transition: opacity ease-out 0.3s;
 }
 .menu-item:hover
 {
   opacity: 1;
-  border: solid;
+  /* border-top: solid; */
+  /* border-bottom: solid; */
 }
 
 .menu-item-bg
@@ -262,7 +263,7 @@ a
   background-image: url("images/ambush.jpg");
   background-position: 0 50%;
   opacity: 0.6;
-  border-radius: 32px;
+  /* border-radius: 32px; */
   z-index: -1;
 }
 
