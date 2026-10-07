@@ -9,6 +9,12 @@
   --colourHighlight: rgb(255, 102, 0);
 
   /* scroll-behavior: smooth; */
+  cursor: url("./images/ui/cursor.png"), auto;
+}
+
+a
+{
+  cursor: url("./images/ui/cursor.png"), auto;
 }
 
 @font-face
@@ -599,7 +605,7 @@ select
 .close-button:hover
 {
   border-radius: 8px;
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: var(--colourHighlight);
   /* font-size: 26px; */
   scale: 115%;
@@ -621,7 +627,7 @@ select
   background-color: var(--colourHighlight);
   /* font-size: 26px; */
   scale: 115%;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .comm-card
